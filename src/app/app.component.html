@@ -1,0 +1,13 @@
+<div class="container">
+<h1> 
+  Show the currency inside input field
+</h1>
+
+<input 
+type="float" 
+placeholder="Amount" 
+[formControl]="amountCtrl"
+[(ngModel)]= "data" 
+[value]="amountCtrl.value | currency : 'USD' : 'symbol':'3.0'"
+aria-label="Amount" (focusout)="focusFunction('$'+ amountCtrl.value)" (focus)="focus(s.substring(1))"/>
+</div>
